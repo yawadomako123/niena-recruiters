@@ -30,32 +30,32 @@ const Features: React.FC = () => {
     ];
 
     return (
-        <section id="features" className="py-24 bg-gray-50">
+        <section id="features" className="py-16 sm:py-20 md:py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
                         How It <span className="gradient-text">Works</span>
                     </h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-base sm:text-lg text-gray-600 px-4">
                         Get verified, post jobs, and find the right candidates for your positions.
                     </p>
                 </div>
 
-                {/* Features Grid - 2x2 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {/* Features Grid - 2x2 on desktop, 1 column on mobile */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
                         return (
                             <div
                                 key={index}
-                                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1"
+                                className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1"
                             >
-                                <div className={`w-14 h-14 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
-                                    <Icon className="w-7 h-7 text-white" />
+                                <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{feature.title}</h3>
+                                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
                             </div>
                         );
                     })}

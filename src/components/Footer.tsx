@@ -5,11 +5,11 @@ import Image from 'next/image';
 const Footer: React.FC = () => {
     return (
         <footer className="bg-gray-900 text-gray-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
                     {/* Brand */}
-                    <div className="col-span-1 md:col-span-2">
-                        <Link href="/" className="flex items-center space-x-2 mb-6">
+                    <div className="col-span-1 sm:col-span-2">
+                        <Link href="/" className="flex items-center space-x-2 mb-4 sm:mb-6">
                             <Image
                                 src="/niena.png"
                                 alt="Niena Recruits Logo"
@@ -17,11 +17,11 @@ const Footer: React.FC = () => {
                                 height={40}
                                 className="rounded-xl"
                             />
-                            <span className="text-xl font-bold text-white">
+                            <span className="text-lg sm:text-xl font-bold text-white">
                                 Niena<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Recruits</span>
                             </span>
                         </Link>
-                        <p className="text-gray-400 max-w-md leading-relaxed mb-6">
+                        <p className="text-sm sm:text-base text-gray-400 max-w-md leading-relaxed mb-4 sm:mb-6">
                             A modern recruitment platform focused on quality connections between companies and verified candidates. Built to make hiring more transparent and efficient.
                         </p>
                         <div className="flex space-x-4">
@@ -46,8 +46,8 @@ const Footer: React.FC = () => {
 
                     {/* Product */}
                     <div>
-                        <h4 className="font-bold text-white text-lg mb-6">Product</h4>
-                        <ul className="space-y-4">
+                        <h4 className="font-bold text-white text-base sm:text-lg mb-4 sm:mb-6">Product</h4>
+                        <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base">
                             <li><Link href="#features" className="hover:text-white transition-colors">Features</Link></li>
                             <li><Link href="#comparison" className="hover:text-white transition-colors">Comparison</Link></li>
                             <li><Link href="#contact" className="hover:text-white transition-colors">Beta Access</Link></li>
@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
 
                     {/* Company */}
                     <div>
-                        <h4 className="font-bold text-white text-lg mb-6">Company</h4>
-                        <ul className="space-y-4">
+                        <h4 className="font-bold text-white text-base sm:text-lg mb-4 sm:mb-6">Company</h4>
+                        <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base">
                             <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
                             <li><Link href="#contact" className="hover:text-white transition-colors">Contact</Link></li>
                         </ul>
@@ -65,11 +65,11 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                    <p className="text-sm text-gray-400">
+                <div className="pt-6 sm:pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p className="text-xs sm:text-sm text-gray-400 text-center md:text-left">
                         © {new Date().getFullYear()} Niena Labs. All rights reserved.
                     </p>
-                    <div className="flex space-x-6 text-sm">
+                    <div className="flex space-x-4 sm:space-x-6 text-xs sm:text-sm">
                         <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
                     </div>
